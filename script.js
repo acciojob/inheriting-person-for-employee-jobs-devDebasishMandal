@@ -1,4 +1,3 @@
-// complete this js code
 class Person{
 	constructor(name, age) {
 		this._name=name;
