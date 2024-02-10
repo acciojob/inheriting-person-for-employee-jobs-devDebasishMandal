@@ -1,30 +1,25 @@
-function Person(name, age) {
-	this.name=name;
-	this.age=age;
-	
+class Person{
+	constructor(name, age) {
+		this._name=name;
+		this._age=age;
+	}
+	greet(){
+		console.log(`Hello, my name is ${this._name}, I am ${this._age} years old.`);
+	}
+} 
+
+class Employee extends Person  {
+	constructor(name, age, jobTitle){
+		super(name,age);
+		this._jobTitle=jobTitle;
+	}
+	jobGreet(){
+		console.log(`Hello, my name is ${this._name}, I am ${this._age} years old, and my job title is ${this._jobTitle}.`);
+	}
 }
-Person.prototype.greet=function(){
-	console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`)
-
-	
-}
-
-function Employee(name, age, jobTitle) {
-	Person.call(this,name,age);
-	this.jobTitle=jobTitle;
-	
-	
-	
-}
-Employee.prototype.jobGreet=function() {
-	console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobtitle}.`)
-
-	
-}
-const person = new Person("Alice", 25); 
-const employee = new Employee("Bob", 30, "Manager");
-
-
+// Hello, my name is Alice and I am 25 years old.
+const person = new Employee("Bob", 30, "Manager");
+const employee = new Person("Alice", 25); 
 
 
 // Do not change code below this line
