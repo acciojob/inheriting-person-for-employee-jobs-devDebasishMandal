@@ -12,8 +12,8 @@ class Person{
 class Employee extends Person  {
 	constructor(name, age, jobTitle){
 		super(name,age);
-		// this._name=name;
-		// this._age=age;
+		this._name=name;
+		this._age=age;
 		this._jobTitle=jobTitle;
 	}
 	jobGreet(){
