@@ -5,13 +5,15 @@ class Person{
 		this._age=age;
 	}
 	greet(){
-		console.log(`Hello, my name is ${name}, I am ${age} years old.`)
+		console.log(`Hello, my name is ${this._name}, I am ${this.age} years old.`)
 	}
 } 
 
 class Employee extends Person  {
 	constructor(name, age, jobTitle){
-		super(name,age);
+		// super(name,age);
+		this._name=name;
+		this._age=age;
 		this._jobTitle=jobTitle;
 	}
 	jobGreet(){
